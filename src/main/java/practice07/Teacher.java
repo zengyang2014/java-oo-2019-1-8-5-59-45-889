@@ -2,7 +2,7 @@ package practice07;
 
 public class Teacher extends Person {
   private static final String teacherMessage = " I am a Teacher. ";
-  private static final String ownClassMessage = " I am a Teacher. I teach Class ";
+  private static final String ownClassMessage = " I am a Teacher. I teach ";
   private static final String noClassMessage = " I am a Teacher. I teach No Class.";
 
   private Klass klass;
@@ -23,7 +23,7 @@ public class Teacher extends Person {
     if (klass == null) {
       introduceMessage += noClassMessage;
     } else {
-      introduceMessage = introduceMessage + ownClassMessage + this.klass.getNumber() + ".";
+      introduceMessage = introduceMessage + ownClassMessage + this.klass.getDisplayName() + ".";
     }
 
     return introduceMessage;
